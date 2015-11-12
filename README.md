@@ -1,5 +1,12 @@
 # DRecyclerViewAdapter
 
+DRecyclerViewAdapter  一个针对RecyclerView的Adapter 
+添加了如何ListView的 addHeadView  addFootView  滑动底部加载更多
+
+
+同时为了减少每次都要自己实现RecyclerView的Adapter写很多代码  也有了下面两个Base类 不使用也不影响
+
+
 - DBaseRecyclerViewAdapter   是项目中使用Adapter的基类  替换原本的RecyclerView.Adapter 与DBaseRecyclerViewHolder 配合使用      模拟EasyRecyclerView 写法
 
 - 也可以不替换不影响 DRecyclerViewAdapter的使用
