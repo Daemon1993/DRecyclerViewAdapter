@@ -3,7 +3,7 @@
 - DBaseRecyclerViewAdapter   项目中使用Adapter的基类  减少每次继承RecyclerView.Adapter导致的代码量
 与DBaseRecyclerViewHolder 配合使用
 
-      class MyAdapter extends DBaseRecyclerViewAdapter<String> {
+        class MyAdapter extends DBaseRecyclerViewAdapter<String> {
         public MyAdapter(List<String> mDatas, Context mContext, String type1) {
             super(mDatas, mContext);
         }
