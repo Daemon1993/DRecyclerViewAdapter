@@ -32,7 +32,7 @@
 
 
 - 效果图
-https://github.com/Daemon1993/DRecyclerViewAdapter/blob/master/GIF.gif
+![GIF.gif](https://github.com/Daemon1993/DRecyclerViewAdapter/blob/master/GIF.gif)
 
 - LinearLayoutManager 使用
 
