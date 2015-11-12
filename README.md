@@ -1,10 +1,11 @@
 # DRecyclerViewAdapter
 
-- DBaseRecyclerViewAdapter   是项目中使用Adapter的基类  替换原本的RecyclerView.Adapter导致的代码量 与DBaseRecyclerViewHolder 配合使用     
+- DBaseRecyclerViewAdapter   是项目中使用Adapter的基类  替换原本的RecyclerView.Adapter 与DBaseRecyclerViewHolder 配合使用      模拟EasyRecyclerView 写法
 
 - 也可以不替换不影响 DRecyclerViewAdapter的使用
 
-- 项目中自定义的Adapter
+- 项目中自定义的Adapater 继承DBaseRecyclerViewAdapter
+
         class MyAdapter extends DBaseRecyclerViewAdapter<String> {
         public MyAdapter(List<String> mDatas, Context mContext, String type1) {
             super(mDatas, mContext);
@@ -17,7 +18,8 @@
         }
 
 
-- ViewHolder 使用
+- DBaseRecyclerViewHolder使用
+
         class MyViewHolder extends DBaseRecyclerViewHolder<String> {
         public MyViewHolder(View itemView, int item_icon, DBaseRecyclerViewAdapter mDBaseRecyclerViewAdapter) {
             super(itemView, mDBaseRecyclerViewAdapter);
@@ -32,7 +34,6 @@
         }
 
 //lists----List<String> 
-
 
 
 - 效果图
