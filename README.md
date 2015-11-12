@@ -3,6 +3,7 @@
 - DBaseRecyclerViewAdapter   项目中使用Adapter的基类  减少每次继承RecyclerView.Adapter导致的代码量
 与DBaseRecyclerViewHolder 配合使用
 
+	//项目中自定义的Adapter
         class MyAdapter extends DBaseRecyclerViewAdapter<String> {
         public MyAdapter(List<String> mDatas, Context mContext, String type1) {
             super(mDatas, mContext);
@@ -14,6 +15,8 @@
         }
         }
 
+
+	//ViewHolder 
         class MyViewHolder extends DBaseRecyclerViewHolder<String> {
         public MyViewHolder(View itemView, int item_icon, DBaseRecyclerViewAdapter mDBaseRecyclerViewAdapter) {
             super(itemView, mDBaseRecyclerViewAdapter);
@@ -32,6 +35,7 @@
 
 
 - 效果图
+
 ![GIF.gif](https://github.com/Daemon1993/DRecyclerViewAdapter/blob/master/GIF.gif)
 
 - LinearLayoutManager 使用
