@@ -117,6 +117,8 @@ DRecyclerViewAdapter  一个针对RecyclerView的Adapter
         rcv.setAdapter(dRecyclerViewAdapter);
 
 
+详细情况使查看Demo
+
 #License
 
     Copyright 2015 Daemon
