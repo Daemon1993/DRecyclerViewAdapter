@@ -32,7 +32,7 @@
 
 
 - 效果图
-![GIF.gif](http://upload-images.jianshu.io/upload_images/831873-2379510019629ef8.gif?imageMogr2/auto-orient/strip)
+https://github.com/Daemon1993/DRecyclerViewAdapter/blob/master/GIF.gif
 
 - LinearLayoutManager 使用
 
