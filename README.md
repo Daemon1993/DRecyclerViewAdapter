@@ -1,14 +1,15 @@
 # DRecyclerViewAdapter
 
-- DBaseRecyclerViewAdapter   Ê¹ÓÃÖĞAdapterµÄ»ùÀà  ¼õÉÙÃ¿´Î¼Ì³ĞRecyclerView.Adapterµ¼ÖÂµÄ´úÂëÁ¿
-ÓëDBaseRecyclerViewHolder ÅäºÏÊ¹ÓÃ
+- DBaseRecyclerViewAdapter   é¡¹ç›®ä¸­ä½¿ç”¨Adapterçš„åŸºç±»  å‡å°‘æ¯æ¬¡ç»§æ‰¿RecyclerView.Adapterå¯¼è‡´çš„ä»£ç é‡
+ä¸DBaseRecyclerViewHolder é…åˆä½¿ç”¨
 
       class MyAdapter extends DBaseRecyclerViewAdapter<String> {
         public MyAdapter(List<String> mDatas, Context mContext, String type1) {
             super(mDatas, mContext);
         }
         @Override
-        public DBaseRecyclerViewHolder onCreateViewHolder1(ViewGroup parent, int viewType, DBaseRecyclerViewAdapter dBaseRecyclerViewAdapter) {
+        public DBaseRecyclerViewHolder onCreateViewHolder1(ViewGroup parent, 
+        int viewType, DBaseRecyclerViewAdapter dBaseRecyclerViewAdapter) {
             return new MyViewHolder(parent, R.layout.item_icon, this);
         }
         }
@@ -30,10 +31,10 @@
 
 
 
-- Ğ§¹ûÍ¼
+- æ•ˆæœå›¾
 ![GIF.gif](http://upload-images.jianshu.io/upload_images/831873-2379510019629ef8.gif?imageMogr2/auto-orient/strip)
 
-- LinearLayoutManager Ê¹ÓÃ
+- LinearLayoutManager ä½¿ç”¨
 
         MyAdapter myAdapter = new MyAdapter(lists, this);
         dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter);
@@ -41,7 +42,7 @@
         LayoutInflater layoutInflater = getLayoutInflater();
         View view = View.inflate(this,R.layout.item_top,null);
 
-        //Ìí¼Ó¶¼ºÍÎ²²¿
+        //æ·»åŠ éƒ½å’Œå°¾éƒ¨
         dRecyclerViewAdapter.addHeaderView(view);
         View view1 = layoutInflater.inflate(R.layout.item_foot, null);
         dRecyclerViewAdapter.addFooterView(view1);
@@ -53,13 +54,13 @@
         rcv.setLayoutManager(linearLayoutManager);
 
 
-- GridLayoutManager Ê¹ÓÃ
+- GridLayoutManager ä½¿ç”¨
   
         MyAdapter myAdapter = new MyAdapter(lists, this);
         dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter);
 
         GridLayoutManager dGridLayoutManager = new GridLayoutManager(this, 2);
-        //ÉèÖÃÁĞÊı ×Ô¶¨ÒåSpanSizeLookup¿ØÖÆÏÔÊ¾ÁĞ±í
+        //è®¾ç½®åˆ—æ•° è‡ªå®šä¹‰SpanSizeLookupæ§åˆ¶æ˜¾ç¤ºåˆ—è¡¨
         dGridLayoutManager.setSpanSizeLookup(new DSpanSizeLookup(dRecyclerViewAdapter, 2));
         rcv.setLayoutManager(dGridLayoutManager);
 
@@ -78,7 +79,7 @@
 
         rcv.setAdapter(dRecyclerViewAdapter);
 
--DStaggeredGridLayoutManager Ê¹ÓÃ ×Ô¶¨ÒåStaggeredGridLayoutManager
+-DStaggeredGridLayoutManager ä½¿ç”¨ è‡ªå®šä¹‰StaggeredGridLayoutManager
 
         MyAdapter myAdapter = new MyAdapter(lists, this, TYPE3);
         dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter);
