@@ -39,6 +39,9 @@ public class DBaseRecyclerViewHolder<M> extends RecyclerView.ViewHolder {
      */
     public int getAdapterItemPosition() {
         int oldPosition =getAdapterPosition();
+        if(mDRecyclerViewAdapter==null){
+            return oldPosition;
+        }
         if (mDRecyclerViewAdapter.isHeader(oldPosition) || mDRecyclerViewAdapter.isFooter(oldPosition)) {
             return -1;
         } else {
