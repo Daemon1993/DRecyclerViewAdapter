@@ -8,7 +8,7 @@
 
 - Gradle 依赖 
 
-		compile 'com.daemon.library:drecyclerviewadapterlib:1.0.1'	
+		compile 'com.daemon.library:drecyclerviewadapterlib:1.0.3'	
 
 - DBaseRecyclerViewAdapter  是项目中使用Adapter的基类  替换原本继承RecyclerView.Adapter 的写法
 - 与DBaseRecyclerViewHolder 配合使用      模拟EasyRecyclerView 写法
