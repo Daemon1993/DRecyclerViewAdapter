@@ -116,6 +116,7 @@ public class DemoActivity extends AppCompatActivity {
 
 
         MyAdapter myAdapter = new MyAdapter(lists, this, TYPE3);
+
         dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter);
 
         DStaggeredGridLayoutManager dStaggeredGridLayoutManager = new DStaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
