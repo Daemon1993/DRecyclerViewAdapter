@@ -1,9 +1,14 @@
 package com.daemon.drecyclerviewadapterlib;
 
+import android.content.Context;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -13,31 +18,72 @@ import java.util.ArrayList;
  */
 public class DRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    public static final int LayoutManager_Linear = 0;
+    public static final int LayoutManager_Grid = 1;
+    public static final int LayoutManager_Staggered = 2;
+
     private static final int TYPE_HEADER_VIEW = Integer.MIN_VALUE;
     private static final int TYPE_FOOTER_VIEW = Integer.MIN_VALUE + 100;
+
+
+
+    private LinearLayoutManager linearLayoutManager;
 
     private RecyclerView.Adapter<RecyclerView.ViewHolder> mInnerAdapter;
 
     private ArrayList<View> mHeaderViews = new ArrayList<>();
     private ArrayList<View> mFooterViews = new ArrayList<>();
 
-    /**
-     * 在不改变原有的Adapter的基础上 做添加头 尾部 等等一些处理
-     */
-    public DRecyclerViewAdapter() {
+    private boolean isDefaultFoot = false;
 
+    private TextView tv_text;
+
+    private ProgressBar pb_loading;
+
+    private String data_over = "没有更多了...";
+    private String load_more = "加载更多...";
+
+
+    public  DRecyclerViewAdapter(DBaseRecyclerViewAdapter myAdapter, RecyclerView rcv, int layoutManager) {
+            this(myAdapter,rcv,layoutManager,0);
     }
 
-    public DRecyclerViewAdapter(DBaseRecyclerViewAdapter adapter) {
-        setAdapter(adapter);
-    }
+    public DRecyclerViewAdapter(DBaseRecyclerViewAdapter myAdapter, RecyclerView rcv, int layoutManager, int spanSize) {
 
-    public void setAdapter(DBaseRecyclerViewAdapter myAdapter) {
-
+        if(layoutManager!=LayoutManager_Linear && spanSize==0){
+            throw new RuntimeException("SpanSize must not 0");
+        }
 
         if (myAdapter != null) {
             if (!(myAdapter instanceof RecyclerView.Adapter))
                 throw new RuntimeException("your adapter must be a RecyclerView.Adapter");
+        }
+
+        switch (layoutManager) {
+            case LayoutManager_Linear:
+                linearLayoutManager = new LinearLayoutManager(rcv.getContext());
+                linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+                rcv.setLayoutManager(linearLayoutManager);
+
+                break;
+            case LayoutManager_Grid:
+
+                GridLayoutManager dGridLayoutManager = new GridLayoutManager(rcv.getContext(), spanSize);
+                dGridLayoutManager.setSpanSizeLookup(new DSpanSizeLookup(this, dGridLayoutManager.getSpanCount()));
+                rcv.setLayoutManager(dGridLayoutManager);
+
+                break;
+            case LayoutManager_Staggered:
+
+                DStaggeredGridLayoutManager dStaggeredGridLayoutManager =
+                        new DStaggeredGridLayoutManager(spanSize, StaggeredGridLayoutManager.VERTICAL);
+                dStaggeredGridLayoutManager.
+                        setSpanSizeLookup(new DSpanSizeLookup(this, dStaggeredGridLayoutManager.getSpanCount()));
+
+
+                rcv.setLayoutManager(dStaggeredGridLayoutManager);
+
+                break;
         }
 
         this.mInnerAdapter = myAdapter;
@@ -45,6 +91,19 @@ public class DRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     }
 
+//    private void setAdapter(DBaseRecyclerViewAdapter myAdapter) {
+//
+//
+//        if (myAdapter != null) {
+//            if (!(myAdapter instanceof RecyclerView.Adapter))
+//                throw new RuntimeException("your adapter must be a RecyclerView.Adapter");
+//        }
+//
+//        this.mInnerAdapter = myAdapter;
+//        myAdapter.setmDRecyclerViewAdapter(this);
+//
+//
+//    }
 
 
     public RecyclerView.Adapter getInnerAdapter() {
@@ -74,9 +133,90 @@ public class DRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.View
             throw new IllegalArgumentException("footer is null");
         }
 
+        //如果设置底部加载更多 不允许在在底部添加
+        if (mFooterViews != null && mFooterViews.size() > 0) {
+            return;
+        }
+
         mFooterViews.add(footer);
     }
 
+
+    /**
+     * 设置 底部加载更多显示的View
+     *
+     * @param loamoreView
+     */
+    public void setLoadMoreView(View loamoreView) {
+        if (loamoreView == null) {
+            throw new IllegalArgumentException("footer is null");
+        }
+
+        //如果设置 底部加载更多 就清楚原有的foot集合
+        mFooterViews.clear();
+
+        mFooterViews.add(mFooterViews.size(), loamoreView);
+
+        isDefaultFoot = false;
+    }
+
+    /**
+     * 设置默认的加载更多
+     */
+    public void setDefaultLoadMoreView(Context context) {
+
+        if (mFooterViews != null && mFooterViews.size() > 0) {
+            return;
+        }
+
+        isDefaultFoot = true;
+
+        View view = View.inflate(context, R.layout.item_loadmore, null);
+        tv_text = (TextView) view.findViewById(R.id.tv_text);
+        pb_loading = (ProgressBar) view.findViewById(R.id.pb_loading);
+
+        mFooterViews.add(mFooterViews.size(), view);
+    }
+
+
+    /**
+     * 底部数据加载完毕 没有更多 改变View 的显示
+     */
+    public void loadMoreOver() {
+        if (!isDefaultFoot) {
+            return;
+        }
+
+        //默认View的时候 加载完毕后UI改变
+        tv_text.setText(data_over);
+        pb_loading.setVisibility(View.GONE);
+    }
+
+    /**
+     * 比如下拉刷新后 希望加载更多复原
+     */
+    public void setLoadMoreInit() {
+        tv_text.setText(load_more);
+        pb_loading.setVisibility(View.VISIBLE);
+    }
+
+    /**
+     * 加载中的文本
+     *
+     * @param text
+     */
+    public void setLoadMoreText(String text) {
+        load_more = text;
+    }
+
+    /**
+     * 加载完毕 文本
+     *
+     * @param text
+     */
+    public void setLoadOverText(String text) {
+        data_over = text;
+    }
 
     /**
      * 返回第一个FoView
