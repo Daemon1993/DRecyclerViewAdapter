@@ -104,7 +104,7 @@ public abstract class DRecyclerViewScrollListener extends RecyclerView.OnScrollL
     }
 
 
-    public abstract void onLoadNextPage(View view);
+    public abstract void onLoadNextPage(RecyclerView view);
 
     public static enum LayoutManagerType {
         LinearLayout,
