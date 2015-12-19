@@ -1,15 +1,18 @@
 # DRecyclerViewAdapter
 
-DRecyclerViewAdapter  一个针对RecyclerView的Adapter 
-添加了如同ListView的 addHeadView  addFootView  滑动底部加载更多实现
+针对RecyclerView的Adapter 
+添加了如同ListView的 addHeadView  addFootView  滑动底部加载更多等功能
 
 
 同时为了减少每次都要自己实现RecyclerView的Adapter写很多代码  也有了下面两个Base类 不使用也不影响
 
+- Gradle 依赖 
 
-- DBaseRecyclerViewAdapter   是项目中使用Adapter的基类  替换原本的RecyclerView.Adapter 与DBaseRecyclerViewHolder 配合使用      模拟EasyRecyclerView 写法
+		compile 'com.daemon.library:drecyclerviewadapterlib:1.0.1'	
 
-- 也可以不替换不影响 DRecyclerViewAdapter的使用
+- DBaseRecyclerViewAdapter  是项目中使用Adapter的基类  替换原本继承RecyclerView.Adapter 的写法
+- 与DBaseRecyclerViewHolder 配合使用      模拟EasyRecyclerView 写法
+
 
 - 项目中自定义的Adapater 继承DBaseRecyclerViewAdapter
 
@@ -25,7 +28,7 @@ DRecyclerViewAdapter  一个针对RecyclerView的Adapter
         }
 
 
-- DBaseRecyclerViewHolder使用
+- ViewHolder继承 DBaseRecyclerViewHolder使用
 
         class MyViewHolder extends DBaseRecyclerViewHolder<String> {
         public MyViewHolder(View itemView, int item_icon, DBaseRecyclerViewAdapter mDBaseRecyclerViewAdapter) {
@@ -40,19 +43,17 @@ DRecyclerViewAdapter  一个针对RecyclerView的Adapter
         }
         }
 
-//lists----List<String> 
+最后 用DRecyclerViewAdapter(Mydapater) 装饰
 
 
-- 效果图
 
-![GIF.gif](https://github.com/Daemon1993/DRecyclerViewAdapter/blob/master/GIF.gif)
-
-
-- 相关使用操作
+- 具体相关 操作实现 
 
 1  LinearLayoutManager 使用  
 
         MyAdapter myAdapter = new MyAdapter(lists, this);
+        
+        //DRecyclerViewAdapter装饰
         dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter);
 
         LayoutInflater layoutInflater = getLayoutInflater();
@@ -62,20 +63,21 @@ DRecyclerViewAdapter  一个针对RecyclerView的Adapter
         dRecyclerViewAdapter.addHeaderView(view);
         View view1 = layoutInflater.inflate(R.layout.item_foot, null);
         dRecyclerViewAdapter.addFooterView(view1);
-        rcv.setAdapter(dRecyclerViewAdapter);
+        
 
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         rcv.setLayoutManager(linearLayoutManager);
-
-
+		rcv.setAdapter(dRecyclerViewAdapter);
+		
  2 GridLayoutManager 使用
   
         MyAdapter myAdapter = new MyAdapter(lists, this);
         dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter);
 
         GridLayoutManager dGridLayoutManager = new GridLayoutManager(this, 2);
+        
         //设置列数 自定义SpanSizeLookup控制显示列表
         dGridLayoutManager.setSpanSizeLookup(new DSpanSizeLookup(dRecyclerViewAdapter, 2));
         rcv.setLayoutManager(dGridLayoutManager);
@@ -115,7 +117,11 @@ DRecyclerViewAdapter  一个针对RecyclerView的Adapter
         View view1 = layoutInflater.inflate(R.layout.item_foot, null);
         dRecyclerViewAdapter.addFooterView(view1);
         rcv.setAdapter(dRecyclerViewAdapter);
+        
+        
+- 效果图
 
+![GIF.gif](https://github.com/Daemon1993/DRecyclerViewAdapter/blob/master/GIF.gif)
 
 详细情况使查看Demo
 
