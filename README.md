@@ -119,6 +119,19 @@
         rcv.setAdapter(dRecyclerViewAdapter);
         
         
+        
+加载更多
+
+	rcv.addOnScrollListener(new DRecyclerViewScrollListener() {
+       @Override
+       public void onLoadNextPage(RecyclerView view) {
+       			//显示底部加载样式  分页加载 最后一页 改变footview里面的显示文本
+           		footView.setVisibility(View.VISIBLE);
+            
+            }
+        });
+        
+        
 - 效果图
 
 ![GIF.gif](https://github.com/Daemon1993/DRecyclerViewAdapter/blob/master/GIF.gif)
