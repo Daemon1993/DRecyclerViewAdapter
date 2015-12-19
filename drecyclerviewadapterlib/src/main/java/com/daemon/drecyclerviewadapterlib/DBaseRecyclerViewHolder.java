@@ -33,7 +33,7 @@ public class DBaseRecyclerViewHolder<M> extends RecyclerView.ViewHolder {
         return (T) itemView.findViewById(id);
     }
 
-    public void setData(M data) {
+    public void setData(M data, int position) {
 
     }
 

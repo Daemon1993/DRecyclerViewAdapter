@@ -8,8 +8,10 @@ import android.os.SystemClock;
 import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +22,8 @@ import com.daemon.drecyclerviewadapterlib.DBaseRecyclerViewAdapter;
 import com.daemon.drecyclerviewadapterlib.DBaseRecyclerViewHolder;
 import com.daemon.drecyclerviewadapterlib.DRecyclerViewAdapter;
 import com.daemon.drecyclerviewadapterlib.DRecyclerViewScrollListener;
+import com.daemon.drecyclerviewadapterlib.DSpanSizeLookup;
+import com.daemon.drecyclerviewadapterlib.DStaggeredGridLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,15 +48,9 @@ public class DemoActivity extends AppCompatActivity {
             dRecyclerViewAdapter.notifyDataSetChanged();
             isLoading = false;
 
-            isOver=true;
-
-            dRecyclerViewAdapter.loadMoreOver();
-
-
             return false;
         }
     });
-    private boolean isOver=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +80,7 @@ public class DemoActivity extends AppCompatActivity {
             @Override
             public void onLoadNextPage(RecyclerView view) {
 
-                if (isLoading || isOver) {
+                if (isLoading) {
                     return;
                 }
 
@@ -119,19 +117,22 @@ public class DemoActivity extends AppCompatActivity {
 
         MyAdapter myAdapter = new MyAdapter(lists, this, TYPE3);
 
+        dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter);
 
-        dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter, rcv,
-                DRecyclerViewAdapter.LayoutManager_Staggered,2);
+        DStaggeredGridLayoutManager dStaggeredGridLayoutManager = new DStaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        dStaggeredGridLayoutManager.setSpanSizeLookup(new DSpanSizeLookup(dRecyclerViewAdapter, dStaggeredGridLayoutManager.getSpanCount()));
+        rcv.setLayoutManager(dStaggeredGridLayoutManager);
+
 
         LayoutInflater layoutInflater = getLayoutInflater();
         View view = layoutInflater.inflate(R.layout.item_top, null);
 
         dRecyclerViewAdapter.addHeaderView(view);
 
-        View view1 = layoutInflater.inflate(R.layout.item_loadmore, null);
+        View view1 = layoutInflater.inflate(R.layout.item_foot, null);
         dRecyclerViewAdapter.addFooterView(view1);
-
         rcv.setAdapter(dRecyclerViewAdapter);
+
     }
 
     private void showG() {
@@ -141,13 +142,12 @@ public class DemoActivity extends AppCompatActivity {
             lists.add("Daemon" + i);
         }
 
-
-
         MyAdapter myAdapter = new MyAdapter(lists, this, TYPE2);
-        dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter, rcv,
-                DRecyclerViewAdapter.LayoutManager_Staggered, 1);
+        dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter);
 
-
+        GridLayoutManager dGridLayoutManager = new GridLayoutManager(this, 2);
+        dGridLayoutManager.setSpanSizeLookup(new DSpanSizeLookup(dRecyclerViewAdapter, 2));
+        rcv.setLayoutManager(dGridLayoutManager);
 
         LayoutInflater layoutInflater = getLayoutInflater();
         View view = layoutInflater.inflate(R.layout.item_top, null);
@@ -158,12 +158,11 @@ public class DemoActivity extends AppCompatActivity {
         dRecyclerViewAdapter.addHeaderView(view2);
         dRecyclerViewAdapter.addHeaderView(view3);
 
-        View view1 = layoutInflater.inflate(R.layout.item_loadmore, null);
+        View view1 = layoutInflater.inflate(R.layout.item_foot, null);
 
         dRecyclerViewAdapter.addFooterView(view1);
 
         rcv.setAdapter(dRecyclerViewAdapter);
-
     }
 
     private void showL() {
@@ -176,12 +175,22 @@ public class DemoActivity extends AppCompatActivity {
 
         MyAdapter myAdapter = new MyAdapter(lists, this, TYPE1);
 
-        dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter,rcv, DRecyclerViewAdapter.LayoutManager_Linear);
+        dRecyclerViewAdapter = new DRecyclerViewAdapter(myAdapter);
 
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View view = View.inflate(this,R.layout.item_top,null);
 
-        dRecyclerViewAdapter.setDefaultLoadMoreView(this);
+        dRecyclerViewAdapter.addHeaderView(view);
+
+        View view1 = layoutInflater.inflate(R.layout.item_foot, null);
+        dRecyclerViewAdapter.addFooterView(view1);
 
         rcv.setAdapter(dRecyclerViewAdapter);
+
+        linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
+        rcv.setLayoutManager(linearLayoutManager);
 
     }
 

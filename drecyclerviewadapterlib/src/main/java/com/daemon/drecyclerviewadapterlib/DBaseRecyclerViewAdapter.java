@@ -53,7 +53,7 @@ public abstract class DBaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<D
 
     @Override
     public void onBindViewHolder(DBaseRecyclerViewHolder holder, int position) {
-       holder.setData(mDatas.get(position));
+       holder.setData(mDatas.get(position),position);
     }
 
     @Override
