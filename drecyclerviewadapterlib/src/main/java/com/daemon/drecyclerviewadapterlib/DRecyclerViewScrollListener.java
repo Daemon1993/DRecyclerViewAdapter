@@ -1,13 +1,13 @@
 package com.daemon.drecyclerviewadapterlib;
 
+
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.View;
 
 /**
- * Created by h2h on 2015/11/10.
+ * Created by Daemon on 2015/11/10.
  */
 public abstract class DRecyclerViewScrollListener extends RecyclerView.OnScrollListener {
 
@@ -82,6 +82,7 @@ public abstract class DRecyclerViewScrollListener extends RecyclerView.OnScrollL
 
 
         if ((visibleItemCount > 0 && currentScrollState == RecyclerView.SCROLL_STATE_IDLE && (lastVisibleItemPosition) >= totalItemCount - 1)) {
+
             onLoadNextPage(recyclerView);
         }
 

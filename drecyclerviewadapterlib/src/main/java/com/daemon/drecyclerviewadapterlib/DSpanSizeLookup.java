@@ -3,7 +3,7 @@ package com.daemon.drecyclerviewadapterlib;
 import android.support.v7.widget.GridLayoutManager;
 
 /**
- * Created by h2h on 2015/11/10.
+ * Created by Daemon on 2015/11/10.
  */
 public class DSpanSizeLookup extends GridLayoutManager.SpanSizeLookup {
 

@@ -10,12 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbecaa3f-5970-4e53-b00c-d1aa8a8fc381" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/res/layout/item_loadmore.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/daemon/drecyclerviewadapter/DemoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/daemon/drecyclerviewadapter/DemoActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drecyclerviewadapterlib/build.gradle" afterPath="$PROJECT_DIR$/drecyclerviewadapterlib/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drecyclerviewadapterlib/drecyclerviewadapterlib.iml" afterPath="$PROJECT_DIR$/drecyclerviewadapterlib/drecyclerviewadapterlib.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewAdapter.java" afterPath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewHolder.java" afterPath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewHolder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewAdapter.java" afterPath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewScrollListener.java" afterPath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewScrollListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DSpanSizeLookup.java" afterPath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DSpanSizeLookup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DStaggeredGridLayoutManager.java" afterPath="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DStaggeredGridLayoutManager.java" />
     </list>
     <ignored path="DRecyclerViewAdapter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,6 +35,11 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -91,21 +100,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DRecyclerViewAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="e#5797#5798#0" expanded="true" />
-                <element signature="e#5829#5830#0" expanded="true" />
-                <element signature="e#5934#5935#0" expanded="true" />
-                <element signature="e#5966#5967#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="item_loadmore.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/res/layout/item_loadmore.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -123,16 +117,16 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+              <caret line="18" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DemoActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DemoActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/daemon/drecyclerviewadapter/DemoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2048192">
+            <state vertical-scroll-proportion="0.0">
               <caret line="178" column="112" selection-start-line="178" selection-start-column="112" selection-end-line="178" selection-end-column="112" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -158,20 +152,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBaseRecyclerViewHolder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewHolder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1031#1032#0" expanded="false" />
-                <element signature="e#1083#1084#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
@@ -182,8 +162,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBaseRecyclerViewAdapter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBaseRecyclerViewAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65995973">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DRecyclerViewAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBaseRecyclerViewHolder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewHolder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DRecyclerViewScrollListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewScrollListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
@@ -673,9 +683,9 @@
                 <option name="name" value="prepareComAndroidSupportSupportV42310Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.daemon.library:drecyclerviewadapterlib:1.0.1" />
+                <option name="description" value="Prepare com.daemon.library:drecyclerviewadapterlib:1.0.2" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComDaemonLibraryDrecyclerviewadapterlib101Library" />
+                <option name="name" value="prepareComDaemonLibraryDrecyclerviewadapterlib102Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1310,9 +1320,9 @@
                 <option name="name" value="prepareComAndroidSupportSupportV42310Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.daemon.library:drecyclerviewadapterlib:1.0.1" />
+                <option name="description" value="Prepare com.daemon.library:drecyclerviewadapterlib:1.0.2" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComDaemonLibraryDrecyclerviewadapterlib101Library" />
+                <option name="name" value="prepareComDaemonLibraryDrecyclerviewadapterlib102Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -2044,7 +2054,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7252492224000" />
+        <entry key="$PROJECT_DIR$" value="7252510057000" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2519,17 +2529,18 @@
         <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewScrollListener.java" />
-        <option value="$PROJECT_DIR$/drecyclerviewadapterlib/build.gradle" />
         <option value="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/res/layout/item_foot.xml" />
-        <option value="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/daemon/drecyclerviewadapter/DemoActivity.java" />
+        <option value="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewAdapter.java" />
+        <option value="$PROJECT_DIR$/drecyclerviewadapterlib/build.gradle" />
+        <option value="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewAdapter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="731" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -2885,10 +2896,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib" />
       <recent name="$PROJECT_DIR$/drecyclerviewadapterlib/src/main/res" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Application.app">
+  <component name="RunManager" selected="Gradle.DRecyclerViewAdapter:drecyclerviewadapterlib [bintrayUpload]">
     <configuration default="false" name="DRecyclerViewAdapter:drecyclerviewadapterlib [sourcesJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -3276,7 +3288,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="731" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="733" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3286,7 +3298,7 @@
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14471544" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14471544" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -3296,12 +3308,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17043619" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.073505655" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17528272" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03902439" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2641357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14910859" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -3356,19 +3368,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#5797#5798#0" expanded="true" />
-            <element signature="e#5829#5830#0" expanded="true" />
-            <element signature="e#5934#5935#0" expanded="true" />
-            <element signature="e#5966#5967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3396,38 +3395,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1031#1032#0" expanded="false" />
-            <element signature="e#1083#1084#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewScrollListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -3445,19 +3416,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#5797#5798#0" expanded="true" />
-            <element signature="e#5829#5830#0" expanded="true" />
-            <element signature="e#5934#5935#0" expanded="true" />
-            <element signature="e#5966#5967#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3477,18 +3435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1031#1032#0" expanded="false" />
-            <element signature="e#1083#1084#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3513,38 +3459,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1031#1032#0" expanded="false" />
-            <element signature="e#1083#1084#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <caret line="18" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -3568,10 +3486,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewScrollListener.java">
+    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/res/layout/item_loadmore.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7853492">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state vertical-scroll-proportion="-4.5283017">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/daemon/drecyclerviewadapter/DemoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="178" column="112" selection-start-line="178" selection-start-column="112" selection-end-line="178" selection-end-column="112" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1351#1686#0" expanded="true" />
+            <element signature="e#1685#1686#0" expanded="true" />
+            <element signature="e#2292#3124#0" expanded="true" />
+            <element signature="e#3123#3124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48387095">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
           <folding />
         </state>
       </provider>
@@ -3584,7 +3535,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewAdapter.java">
+    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewScrollListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
@@ -3592,41 +3543,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/res/layout/item_loadmore.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5283017">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DRecyclerViewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#5797#5798#0" expanded="true" />
-            <element signature="e#5829#5830#0" expanded="true" />
-            <element signature="e#5934#5935#0" expanded="true" />
-            <element signature="e#5966#5967#0" expanded="true" />
-          </folding>
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/daemon/drecyclerviewadapter/DemoActivity.java">
+    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2048192">
-          <caret line="178" column="112" selection-start-line="178" selection-start-column="112" selection-end-line="178" selection-end-column="112" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1351#1686#0" expanded="true" />
-            <element signature="e#1685#1686#0" expanded="true" />
-            <element signature="e#2292#3124#0" expanded="true" />
-            <element signature="e#3123#3124#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drecyclerviewadapterlib/src/main/java/com/daemon/drecyclerviewadapterlib/DBaseRecyclerViewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65995973">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>

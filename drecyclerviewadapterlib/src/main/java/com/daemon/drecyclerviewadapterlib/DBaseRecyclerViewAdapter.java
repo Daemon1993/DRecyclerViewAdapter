@@ -7,9 +7,24 @@ import android.view.ViewGroup;
 import java.util.List;
 
 /**
- * Created by h2h on 2015/11/12.
+ * Created by Daemon on 2015/11/12.
  */
 public abstract class DBaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<DBaseRecyclerViewHolder> {
+
+    public interface ItemOnClickListener{
+        void onclick(int index);
+    }
+
+    ItemOnClickListener mItemOnClickListener;
+
+    public ItemOnClickListener getmItemOnClickListener() {
+        return mItemOnClickListener;
+    }
+
+    public void setmItemOnClickListener(ItemOnClickListener mItemOnClickListener) {
+        this.mItemOnClickListener = mItemOnClickListener;
+    }
+
 
     private List<T> mDatas;
 
@@ -38,7 +53,7 @@ public abstract class DBaseRecyclerViewAdapter<T> extends RecyclerView.Adapter<D
 
     @Override
     public void onBindViewHolder(DBaseRecyclerViewHolder holder, int position) {
-       holder.setData(mDatas.get(position),position);
+       holder.setData(mDatas.get(position));
     }
 
     @Override

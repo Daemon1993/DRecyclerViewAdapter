@@ -6,7 +6,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 /**
- * Created by h2h on 2015/11/10.
+ * Created by Daemon on 2015/11/10.
  */
 public class DStaggeredGridLayoutManager  extends StaggeredGridLayoutManager {
 
@@ -34,7 +34,7 @@ public class DStaggeredGridLayoutManager  extends StaggeredGridLayoutManager {
                 try {
                     View view = recycler.getViewForPosition(i);
                     if (view != null) {
-                        StaggeredGridLayoutManager.LayoutParams lp = (StaggeredGridLayoutManager.LayoutParams) view.getLayoutParams();
+                        LayoutParams lp = (LayoutParams) view.getLayoutParams();
                         lp.setFullSpan(true);
                     }
                 } catch (Exception e) {
